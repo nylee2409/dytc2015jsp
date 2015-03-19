@@ -1,4 +1,4 @@
-package exam.chapter01;
+package exam.servlet.test;
 
 import java.io.IOException;
 import java.io.PrintWriter;
@@ -10,47 +10,76 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 /**
- * Servlet implementation class HelloServlet
+ * Servlet implementation class ServletTest
  */
-//@WebServlet("*.first")  // Annotation http://localhost:8080/hello.first
-@WebServlet("/HelloServlet")  // Annotation http://localhost:8080/HelloServlet
-//@WebServlet("/hello")  // Annotation http://localhost:8080/HelloServlet
-
-public class HelloServlet extends HttpServlet {  // 상속 
+@WebServlet("/TestServlet")
+public class TestServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public HelloServlet() {
+    public TestServlet() {
         super();
         // TODO Auto-generated constructor stub
     }
 
 	/**
+	 * GET 방식 
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
-	 * GET 방식으로 요청이 들어온 경우 자동 호출!
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
 		
-		response.setContentType("text/html; charset=utf-8");
+		// 요청처리 한글
+		//request.setCharacterEncoding("UTF-8");
+		
+		// 응답처리 한글화 
+		response.setContentType("text/html; charset=UTF-8");
+		
 		PrintWriter out = response.getWriter();
-		out.print("");
-		out.print("Hello Servlet - GET : 한글 ");
-		out.close();
+		
+		out.print("==========GET================<br>");
+		
+		
+		String name = request.getParameter("name");
+		
+		out.print("이름 : " + name + "<br>");
+		
+		
+		String[] hobby = request.getParameterValues("hobby");
+		
+		for(int i=0; i<hobby.length; i++)
+			out.print("취미 : " + hobby[i]);
+		
+		
+		String gender = request.getParameter("gender");
+		
+		out.print("<br>성별 : " + gender);
+		
+		
 	}
 
 	/**
+	 * POST 방식
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
-	 * POST 방식으로 요청이 들어온 경우 자동 호출!
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
 		
+		// 요청처리 한글
+		//request.setCharacterEncoding("UTF-8");
+
+		// 응답처리 한글 
+		response.setContentType("text/html; charset=UTF-8");
+		
 		PrintWriter out = response.getWriter();
 		
-		out.print("Hello Servlet - POST");
+		out.print("==========POST================<br>");
+		
+		String name = request.getParameter("name");
+		
+		out.print(name);
 	}
 
 }
