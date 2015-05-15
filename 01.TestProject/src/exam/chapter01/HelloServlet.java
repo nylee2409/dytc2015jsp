@@ -50,7 +50,7 @@ public class HelloServlet extends HttpServlet {  // 상속
 		
 		PrintWriter out = response.getWriter();
 		
-		out.print("Hello Servlet - POST");
+		out.print("Hello Servlet - POST - 우하하하하하하");
 	}
 
 }
