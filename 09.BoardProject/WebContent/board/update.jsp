@@ -4,7 +4,7 @@
 <html>
 	<head>
 		<title>JSP/Servlet Example</title>
-		<link rel="Stylesheet" type="text/css" href="./css/bootstrap.css"></link>
+		<link rel="Stylesheet" type="text/css" href="../css/bootstrap.css"></link>
 	</head>
 	
 	<body>
@@ -33,7 +33,7 @@
 		<!-- 게시판 글쓰기  시작  -->
 		<form class="form-horizontal">
 		  <fieldset>
-		    <legend>게시판 글쓰기 </legend>
+		    <legend>게시판 수정 </legend>
 		    
 		    <div class="form-group">
 		      <label for="inputEmail" class="col-lg-2 control-label">이름 : </label>
@@ -62,6 +62,7 @@
 		        <input type="file" class="form-control" id="file" placeholder="파일을 선택하세요.">
 		      </div>
 		    </div>
+		    
 		    
 		    <div class="form-group">
 		      <div class="col-lg-10 col-lg-offset-2">

@@ -4,7 +4,7 @@
 <html>
 	<head>
 		<title>JSP/Servlet Example</title>
-		<link rel="Stylesheet" type="text/css" href="./css/bootstrap.css"></link>
+		<link rel="Stylesheet" type="text/css" href="../css/bootstrap.css"></link>
 	</head>
 	
 	<body>
@@ -33,41 +33,32 @@
 		<!-- 게시판 글쓰기  시작  -->
 		<form class="form-horizontal">
 		  <fieldset>
-		    <legend>게시판 수정 </legend>
+		    <legend>게시판 내용  </legend>
 		    
 		    <div class="form-group">
 		      <label for="inputEmail" class="col-lg-2 control-label">이름 : </label>
 		      <div class="col-lg-10">
-		        <input type="text" class="form-control" id="subject" placeholder="이름을 입력하세요.">
+		        이름 
 		      </div>
 		    </div>
 		    
 		    <div class="form-group">
 		      <label for="inputEmail" class="col-lg-2 control-label">제목 : </label>
 		      <div class="col-lg-10">
-		        <input type="text" class="form-control" id="subject" placeholder="제목을 입력하세요.">
+		        제목 
 		      </div>
 		    </div>
 		   
 		    <div class="form-group">
 		      <label for="textArea" class="col-lg-2 control-label">내용 : </label>
 		      <div class="col-lg-10">
-		        <textarea class="form-control" rows="10" id="textArea"></textarea>
+		        내용 
 		      </div>
 		    </div>
-		    
-		    <div class="form-group">
-		      <label for="file" class="col-lg-2 control-label">첨부파일 : </label>
-		      <div class="col-lg-10">
-		        <input type="file" class="form-control" id="file" placeholder="파일을 선택하세요.">
-		      </div>
-		    </div>
-		    
-		    
 		    <div class="form-group">
 		      <div class="col-lg-10 col-lg-offset-2">
-		        <button type="reset" class="btn btn-default">취소</button>
-		        <button type="submit" class="btn btn-primary">글쓰기</button>
+		        <a href="update.jsp" class="btn btn-default">수정하기</a>
+		        <a href="delete.jsp" class="btn btn-primary">삭제하기</a>
 		      </div>
 		    </div>
 		  </fieldset>
